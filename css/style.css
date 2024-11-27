@@ -1,36 +1,74 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.barra-navegacao {
-    background-color: #ffecd1;
-}
-
 body {
-    height: 100%;
-    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-#barra-navegacao li a{
-    color: #000000;
-    transition: all 0.5s;
+.barra-navegacao {
+    background-color: #ffffff;
+    position: fixed; /* Deixa a barra fixa no topo da página */
+    width: 100%; /* Garante que a barra ocupe toda a largura */
+    top: 0; /* Fixa no topo */
+    z-index: 1000; /* Garante que a barra fique por cima de outros elementos */
 }
 
-#barra-navegacao li a:hover{
-    color: #0059ff;
+.navbar-nav {
+    display: flex; /* Utiliza o flexbox */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    width: 100%; /* Garante que o container ocupe toda a largura */
 }
 
-#barra-navegacao button {
-    background-color: #8e4700 ;
-    border-radius: 8px;
-    color:#fff;
+.navbar-nav .nav-item {
+    padding-left: 20px; /* Espaçamento entre os itens */
+    padding-right: 20px; /* Espaçamento entre os itens */
 }
 
-#barra-navegacao button:hover {
-    background-color: #ff8001;
+.navbar-nav .nav-link {
+    color: #000; /* Define a cor do texto */
+    text-transform: uppercase; /* Deixa o texto em maiúsculas */
+    font-weight: bold; /* Torna o texto em negrito */
+    padding: 10px 15px; /* Ajuste de espaçamento dentro dos itens */
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #007BFF; /* Altera a cor de fundo ao passar o mouse */
+    color: white; /* Altera a cor do texto */
+}
+
+
+#home {
+    background-image: url('../img/Fundo.png');
+    background-size: cover;
+    height: 550px;
+    background-position: center;
+    margin-bottom: 0;
+}
+
+.lista-atividades {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.lista-atividades  li {
+    font-size: 18px;
+    color: #005cb3;
+    margin-bottom: 12px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.lista-atividades  li span {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #0070a3;
 }
 
 footer {
@@ -42,33 +80,139 @@ footer p {
     color: #fff;
 }
 
-#home {
-    background-image: url('../img/Fundo.png');
-    background-size: cover;
-    height: 550px;
-    background-position: center;
-    margin-bottom: 0;
-}
 
-#home h1 {
-    color: #fff;
-}
+.form-container {
+    background-color: #fff; /* Cor de Fundo */
+    padding: 40px 60px; /* Espaçamento interno */
+    border-radius: 8px; /* Borda arredondada nas pontas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombreamento*/
+    width: 100%; /* Tamanho Largura */
+    max-width: 300px; /* Largura máxima */
+    height: 100%; /* Tamanho altura */
+    max-height: 400px; /* Altura máxima */
+    margin: 20px; /* Margem todos os lados*/
+    margin-right: 100px; /* Margem a direita */
+    }
+
+.form-container form {
+    text-align: center; /* Centraliza o botão */
+    }
+
+.form-container h2 {
+    margin-bottom: 50px; /* Margem inferior */
+    }
+
+.form-container button {
+    justify-items: center; /* Orientando no centro o horizontalmente*/
+    align-items: center; /* Orientando no centro o verticalmente */
+    }
 
 .form-group {
-    margin-bottom: 20px;
-}
+    margin-bottom: 20px; /* Margem inferior */
+    }
 
 .form-group input, select {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0);
-    border-radius: 4px;
-    outline: none;
-    transition: border-color 0.3s;
+    box-sizing: border-box; /*Padding e border incluídos no cálculo da largura e altura */
+    width: 100%; /* Tamanho Largura */
+    padding: 10px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho fonte */
+    border: 1px solid #ccc; /* Bordas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombreamento */
+    border-radius: 4px; /* Borda arredondada nas pontas */
+    outline: none; /* Remove o outline ao focar */
+    transition: border-color 0.3s; /* Adiciona uma transição suave */
 }
 
+    /* Estilo ao clicar em um capo (Focar em um campo) */
 .form-group input:focus, select:focus {
-    border-color: #2ecc71;
+    border-color: #2ECC71; /* Cor na borda */
 }
+
+button {
+    color: #FFF; /* Define a cor do texto do botão (branco) */
+    border: none; /* Remove qualquer borda padrão do botão */
+    padding: 10px 20px; /* Define o preenchimento interno */
+    border-radius: 50px; /* Aplica bordas arredondadas ao botão */
+    background-color: #007BFF; /* Define a cor de fundo do botão */
+    font-size: 14px; /* Define o tamanho da fonte (14px) */
+    cursor: pointer; /* Altera o cursor para uma mãozinha */
+    transition: all 0.3s ease; /* Adiciona uma transição suave */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra efeito de profundidade */
+    width: 150px; /* Define a largura do botão */
+    height: 40px; /* Define a altura do botão */
+}
+    /* Estilo para quando o mouse passa */
+button:hover {
+    background-color: rgb(52, 4, 163); /* Define a cor de fundo do botão */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Aumenta a sombra */
+}
+
+.card-container {
+display: grid; /* Define o layout como grid */
+grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas iguais */
+gap: 20px; /* Espaço entre os itens do grid */
+padding: 20px; /* Espaçamento interno no container */
+justify-items: center; /* Centraliza os cards horizontalmente nas colunas */
+}
+.card {
+background-color: white; /* Cor de fundo branca para o card */
+width: 250px; /* Largura do card */
+height: 300px; /* Altura do card */
+border-radius: 8px; /* Bordas arredondadas */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
+overflow: hidden; /* Garante que conteúdo extra fora do card seja escondido */
+transition: transform 0.1s ease; /* Animação suave ao passar o mouse */
+text-align: center; /* Centraliza o conteúdo dentro do card */
+padding: 20px; /* Espaçamento interno do card */
+}
+
+.card:hover {
+transform: translateY(-10px); /* Move o card para cima */
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra */
+}
+
+.card h3 {
+font-size: 14px; /* Tamanho da fonte do título */
+}
+
+.card p {
+font-size: 12px; /* Tamanho da fonte do parágrafo */
+color: #555; /* Cor do texto (cinza claro) */
+line-height: 1.6; /* Espaçamento entre linhas do texto */
+}
+
+.card img {
+width: 100px; /* Largura da imagem */
+height: 100px; /* Altura da imagem */
+border-radius: 50%; /* Faz a imagem ficar redonda */
+object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+margin-bottom: 20px; /* Espaço abaixo da imagem */
+
+}
+
+.card-content {
+justify-items: center; /* Centraliza os itens horizontalmente dentro do grid */
+align-items: center; /* Centraliza os itens verticalmente dentro do grid */
+}
+
+.container {
+    display: flex;
+    justify-content: flex-end; /* Alinha a imagem à direita */
+    position: relative;
+}
+
+.logo {
+    /* Estilos para a logo */
+    margin-bottom: 20px; /* Espaço entre a logo e a imagem */
+}
+
+.right-image {
+    margin-top: -30px; /* Move a imagem para cima */
+    margin-right: -30px; /* Move a imagem ainda mais para a direita */
+}
+
+.right-image img {
+    width: 490px; /* Aumenta o tamanho da imagem */
+}
+
+

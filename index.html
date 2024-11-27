@@ -12,7 +12,7 @@
     </head>
     <body>
         <nav class="barra-navegacao navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#"><img src="img/C (1).png" width="150" alt="Logo Classic"></a>
+            <a class="logo" href="#"><img src="img/C (1).png" width="150" alt="Logo Classic"></a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#barra-navegacao" aria-controls="barra-navegacao" aria-expanded="false" aria-label="Alterna navegacao">
                 <span class="navbar-toggler-icon"></span>
@@ -30,113 +30,116 @@
         </nav>
         <main class="flex-fill">
             <header id="home" class="jumbotron jumbotron-fluid">
-                <div class="container text-center">
-                    <h1 class="display-5 mt-3 mb-5">
+                <div class="container">
+                    <!-- Título no canto esquerdo -->
+                    <h1 class="display-5">
                         COMPRE SEUS TENIS HOJE!!
                     </h1>
-                </div>
-                <div class="d-flex justify-content-center">
-                    <a href="#contato">
-                        <button class="btn mx-auto my-5" type="button">
-                            Comprar Agora
-                        </button>
-                    </a>
+                    <!-- Botão "Comprar Agora" no canto inferior esquerdo -->
+                    <div class="d-flex justify-content-center">
+                        <a href="#contato">
+                            <button class="btn btn-primary buy-now-button" type="button">
+                                Comprar Agora
+                            </button>
+                        </a>
+                    </div>
+                    <!-- Imagem -->
+                    <div class="right-image">
+                        <img src="img/Tenis 1.png" class="img-fluid" alt="Evento Classic">
+                    </div>
                 </div>
             </header>
+        </main>
 
-            <section id="sobre" class="event-about container-fluid">
-                <div class="row mx-auto">
-                    <div class="col-md-4 my-auto mx-auto">
-                        <p class="paragrafo-sobre-1">
-                            O STEPTEC é o maior evento de Tecnologia do Ramo Calçadista na Capital do calçado no Brasil!
-                        </p>
-                        <p class="paragrafo-sobre-2">
-                            A Milardo, fabrica e loja dos calçados mais tecnologicos do mercado,<span>é a anfitriã do evento</span>
-                        </p>
+<section id="beneficios" class="py-5 bg-light">
+    <div class="container text-center">
+        <h2 class="mb-4">PRODUTOS DE LANÇAMENTO</h2>
+        <p><strong>50% DE DESCONTO É SÓ AQUI!!</strong></p>
+        <div class="row justify-content-center">
+            <div class="col-md-4 col-sm-6 my-3 d-flex justify-content-center">
+                <div class="card shadow-lg border-0">
+                    <img src="img/Tenis de compra 1.png" alt="Tênis Premium LV" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">TÊNIS PREMIUM LV</h3>
+                        <p class="card-text">R$900,00</p>
+                        <button class="btn btn-primary w-100">COMPRAR</button>
                     </div>
-                    <div class="col-md-4 my-5">
-                        <img src="img/sessao2.png" class="img-fluid" alt="Evento STEPTEC">
-                    </div>
-                    <div class="col-md-4 my-auto mx-auto">
-                        <p class="paragrafo-sobre-3">
-                            O evento vai contar com:
-                        </p>
-                    </ul>
                 </div>
             </div>
-        </section>
-
-        <section id="apresentacao">
-        <h2>COMPRE SEUS TENIS HOJE!!</h2>
-
-        <h5>Vem para a Classic Shoes e descubra o que significa andar com mais atitude!
-            <br><br> So quem tem o novo modelo sabe a sensacao de estar um passo a frente. 
-            <br><br>Não perca essa chance unica!</h5>
-        </section>
-
-        <button>COMPRE AQUI</button>
-
-        <h2>PRODUTOS DE LANÇAMENTO</h2>
-        <h2>50% DE DESCONTO É SÓ AQUI!!</h2>
-        <h4>TÊNIS PREMIUM LV <br><br>R$900,00</h4> <button>COMPRAR</button>
-
-        <h4>TÊNIS WEEGO THE  <br><br>R$1200,00</h4> <button>COMPRAR</button>
-
-        <h4>NIKE AIR MAX 90 <br><br>R$1000,00</h4> <button>COMPRAR</button>
-
-        <img src="img/Tenis 2.png" alt="foto 2" class="card-img-2">
-
-        <h5> Prepare-se para o modelo mais aguardado do ano!
-            <br><br> 
-            O novo tênis da Classic Shoes une design arrojado, conforto e tecnologia de ponta.
-            Por que você vai amar?
-            <br><br>
-             ✔️ Design Moderno: Estilo e conforto em um único modelo.
-            <br><br>
-             ✔️ Tecnologia de Conforto: Materiais respirantes e solado de alta performance.
-            <br><br>
-             ✔️ Versatilidade: Ideal para qualquer ocasião, do trabalho ao lazer.
-            <br><br>
-            Garanta o seu agora!</h5>
-        
-
-        <section>
-            <h2>Formulário</h2>
-            <form action="/enviarContato" method="post">
-                <label for="nome">Nome</label>
-                <input 
-                    type="text" 
-                    name="nome" 
-                    id="nome" 
-                    placeholder="insira seu nome" 
-                    required
-                ><br><br>
-
-                <label for="email">E-mail</label>
-                <input 
-                    type="text" 
-                    name="email" 
-                    id="email" 
-                    placeholder="insira seu E-mail" 
-                    required
-                ><br><br>
-
-                <label for="telefone">Telefone</label>
-                <input 
-                    type="text-number"
-                    name="telefone" 
-                    id="telefone" 
-                    placeholder="Insira seu numero" 
-                    required
-                ><br><br>
-
-                <div class="text-center">
-                    <button class="btn btn-enviar">
-                        Enviar
-                    </button>
+            <div class="col-md-4 col-sm-6 my-3 d-flex justify-content-center">
+                <div class="card shadow-lg border-0">
+                    <img src="img/Tenis de compra 2.png" alt="Tênis WEEGO THE" class="img">
+                    <div class="card-body">
+                        <h3 class="card-title">TÊNIS WEEGO THE</h3>
+                        <p class="card-text">R$1200,00</p>
+                        <button class="btn btn-primary w-100">COMPRAR</button>
+                    </div>
                 </div>
-                <br></br>
-        </section>
+            </div>
+            <div class="col-md-4 col-sm-6 my-3 d-flex justify-content-center">
+                <div class="card shadow-lg border-0">
+                    <img src="img/Tenis de compra 3.png" alt="Nike Air Max 90" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">NIKE AIR MAX 90</h3>
+                        <p class="card-text">R$1000,00</p>
+                        <button class="btn btn-primary w-100">COMPRAR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="sobre" class="event-about container-fluid">
+    <div class="row mx-auto">
+        <div class="col-md-4 my-auto mx-auto">
+            <p class="paragrafo-sobre-1">
+                Vem para a Classic Shoes e descubra o que significa andar com mais atitude!
+                <br><br> So quem tem o novo modelo sabe a sensacao de estar um passo a frente. 
+                <br><br>Não perca essa chance unica!
+            </p>
+            <p class="paragrafo-sobre-2">
+                A Classic Shoes, fabrica e loja dos calçados mais tecnologicos do mercado,<span>é a anfitriã do evento</span>
+            </p>
+            <ul class="lista-atividades">
+                <li><span>&#10003;</span>Prepare-se para o modelo mais aguardado do ano!</li>
+                <li><span>&#10003;</span>O novo tênis da Classic Shoes une design arrojado, conforto e tecnologia de ponta.</li>
+                <li><span>&#10003;</span>Por que você vai amar?</li>
+                <li><span>&#10003;</span>Design Moderno: Estilo e conforto em um único modelo.</li>
+                <li><span>&#10003;</span>Tecnologia de Conforto: Materiais respirantes e solado de alta performance.</li>
+                <li><span>&#10003;</span>Versatilidade: Ideal para qualquer ocasião, do trabalho ao lazer.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+    <section id="contato">
+        <div class="form-container">
+            <h2>Formulário</h2>
+                <form>
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Nome" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="E-mail" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="telefone" placeholder="Telefone" required>
+                </div>
+                <div class="form-group">
+                    <select id="segmento-evento" name="segmento-evento">
+                    <option value="" disabled selected>Segmento do Evento</option>
+                    <option value="formatura">Formatura</option>
+                    <option value="rodeio">Rodeio</option>
+                    <option value="particular">Particular</option>
+                    <option value="casamento">Casamento</option>
+                    <option value="aniversario">Aniversario</option>
+                    </select>
+                </div>
+                    <button class="btn" type="submit">Enviar</button>
+                </form>
+        </div>
+    </section>
 
             <h4>DEPOIMENTOS</h4>
 
