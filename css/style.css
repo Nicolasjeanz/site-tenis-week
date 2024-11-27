@@ -211,8 +211,155 @@ align-items: center; /* Centraliza os itens verticalmente dentro do grid */
     margin-right: -30px; /* Move a imagem ainda mais para a direita */
 }
 
-.right-image img {
-    width: 490px; /* Aumenta o tamanho da imagem */
+.jumbotron {
+    display: flex; /* Utiliza o Flexbox */
+    justify-content: space-between; /* Espaça o conteúdo entre o título, botão e imagem */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    padding: 50px 20px; /* Ajusta o preenchimento */
+    background-image: url('img/Fundo.png'); /* Exemplo de imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    min-height: 400px; /* Altura mínima */
+    position: relative; /* Permite posicionar elementos dentro do jumbotron */
 }
 
+.jumbotron .container {
+    display: flex;
+    justify-content: space-between; /* Espaça os itens dentro do container */
+    align-items: center; /* Alinha verticalmente no centro */
+    width: 100%;
+}
+
+.jumbotron h1 {
+    font-size: 2.5rem; /* Ajuste do tamanho do título */
+    color: #fff; /* Cor do título */
+}
+
+
+.right-image {
+    margin-left: 20px; /* Espaçamento entre a imagem e o conteúdo à esquerda */
+}
+
+.right-image img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse os limites do container */
+    height: auto; /* Ajusta a altura da imagem automaticamente */
+    border-radius: 8px; /* Borda arredondada para a imagem */
+}
+
+.buy-now-button {
+    margin-top: 20px; /* Espaçamento superior */
+    border-radius: 50px; /* Borda arredondada do botão */
+    padding: 20px 50px; /* Aumenta o tamanho do botão */
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Deixa a fonte mais ousada */
+    color: #fff; /* Cor do texto (branco) */
+    background-color: #FF5722; /* Cor de fundo vibrante (laranja) */
+    border: none; /* Remove a borda padrão */
+    position: absolute; /* Posiciona o botão de forma absoluta */
+    left: 20px; /* Alinha o botão ao canto esquerdo */
+    bottom: 20px; /* Alinha o botão ao canto inferior */
+    z-index: 10; /* Garante que o botão fique acima de outros elementos */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra suave para profundidade */
+    cursor: pointer; /* Muda o cursor para uma mãozinha quando passar o mouse */
+    transition: all 0.3s ease; /* Adiciona transição suave para efeito hover */
+}
+
+.buy-now-button:hover {
+    background-color: #FF7043; /* Cor de fundo mais clara quando passar o mouse */
+    transform: scale(1.1); /* Aumenta o botão levemente ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
+}
+
+.buy-now-button:focus {
+    outline: none; /* Remove o contorno ao focar no botão */
+}
+
+.jumbotron div p {
+    color: #fff; /* Cor do título */
+}
+
+/* Container principal do banner */
+#home {
+    background-image: url('../img/Fundo.png'); /* Imagem de fundo */
+    background-size: cover; /* A imagem vai cobrir toda a área */
+    background-position: center; /* Centraliza a imagem de fundo */
+    display: flex; /* Usando Flexbox para alinhar os conteúdos */
+    justify-content: space-between; /* Espaça os itens com o texto à esquerda e a imagem à direita */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    height: 550px; /* Altura do banner */
+    color: #fff; /* Cor do texto do banner */
+    padding: 0 20px; /* Adiciona espaçamento dentro do banner */
+    position: relative; /* Para usar com o posicionamento do botão */
+}
+
+/* Container para o texto */
+#home .text-container {
+    max-width: 600px; /* Limita a largura do texto */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Título no banner */
+#home h1 {
+    font-size: 28px; /* Tamanho reduzido do título */
+    font-weight: bold; /* Deixa o título em negrito */
+    line-height: 1.4; /* Espaçamento entre as linhas */
+    margin-bottom: 15px; /* Espaçamento abaixo do título */
+    text-transform: uppercase; /* Transforma as letras para maiúsculas */
+}
+
+/* Botão "Comprar Agora" */
+.buy-now-button {
+    padding: 15px 40px; /* Tamanho do botão */
+    font-size: 18px; /* Tamanho menor da fonte */
+    font-weight: bold; /* Deixa a fonte do botão em negrito */
+    background-color: #FF5722; /* Cor laranja vibrante */
+    color: #fff; /* Cor do texto no botão */
+    border: none; /* Remove borda */
+    border-radius: 50px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor para mãozinha */
+    margin-top: 20px; /* Margem superior para dar um espaçamento entre o texto e o botão */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+/* Efeito quando o mouse passa sobre o botão */
+.buy-now-button:hover {
+    background-color: #FF7043; /* Cor do botão quando o mouse passa */
+    transform: scale(1.1); /* Aumenta o tamanho do botão */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta a sombra */
+}
+
+/* Estilo para a imagem */
+.right-image {
+    position: relative; /* Posiciona a imagem dentro da flexbox */
+    max-width: 400px; /* Tamanho máximo da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Tornando o banner responsivo */
+@media (max-width: 768px) {
+    #home {
+        flex-direction: column; /* Empilha os elementos em coluna em telas menores */
+        text-align: center; /* Centraliza o texto */
+        height: auto; /* Altura automática para telas pequenas */
+        padding: 20px; /* Adiciona padding */
+    }
+
+    /* Ajustando o título em telas pequenas */
+    #home h1 {
+        font-size: 20px; /* Menor tamanho de fonte */
+        margin-bottom: 10px; /* Menor margem inferior */
+    }
+
+    /* Ajustando o botão em telas pequenas */
+    .buy-now-button {
+        font-size: 16px; /* Menor tamanho de fonte */
+        padding: 15px 40px; /* Menor tamanho do botão */
+    }
+
+    /* Ajustando a imagem em telas pequenas */
+    .right-image {
+        max-width: 300px; /* Imagem menor em telas pequenas */
+    }
+}
 
