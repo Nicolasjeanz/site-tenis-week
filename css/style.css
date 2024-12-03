@@ -78,6 +78,9 @@ footer {
 
 footer p {
     color: #fff;
+    justify-items: center;
+    align-items: center;
+
 }
 
 
@@ -362,4 +365,6 @@ align-items: center; /* Centraliza os itens verticalmente dentro do grid */
         max-width: 300px; /* Imagem menor em telas pequenas */
     }
 }
+
+
 
