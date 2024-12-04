@@ -11,153 +11,175 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     </head>
     <body>
-        <nav class="barra-navegacao navbar navbar-expand-lg navbar-light">
-            <a class="logo" href="#"><img src="img/CLASSIC SHOES.png" width="150" alt="Logo Classic"></a>
-
-            <div id="barra-navegacao" class="collapse navbar-collapse">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item mx-4"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item mx-4"><a class="nav-link" href="#sobre">Sobre</a></li>
-                    <li class="nav-item mx-4"><a class="nav-link" href="#info">Info</a></li>
-                    <li class="nav-item mx-4"><a class="nav-link" href="#contato">Contato</a></li>
+        <nav class="barra-navegacao">
+            <div class="container-nav">
+                <!-- Links à esquerda -->
+                <ul class="navbar-nav left">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                </ul>
+        
+                <!-- Logo Centralizada -->
+                <ul class="navbar-nav logo">
+                    <li class="nav-item">
+                        <a href="#">
+                            <img src="img/CLASSIC SHOES.png" width="150" alt="Logo Classic">
+                        </a>
+                    </li>
+                </ul>
+        
+                <!-- Links à direita -->
+                <ul class="navbar-nav right">
+                    <li class="nav-item"><a class="nav-link" href="#info">Info</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
                 </ul>
             </div>
         </nav>
-        <main class="flex-fill">
-            <header id="home" class="jumbotron jumbotron-fluid">
-                <div class="container">
-                    <!-- Título no canto esquerdo -->
-                    <h1 class="display-5">
-                        COMPRE SEUS TENIS HOJE!!
-                        <br><br> para a Classic Shoes e descubra o que significa andar com mais atitude!
-                            <br><br> So quem tem o novo modelo sabe a sensacao de estar um passo a frente. 
-                    </h1>
-                    <!-- Botão "Comprar Agora" no canto inferior esquerdo -->
-                    <div class="d-flex justify-content-center">
-                        <a href="#contato">
-                            <button class="btn btn-primary buy-now-button" type="button">
-                                Comprar Agora
-                            </button>
-                        </a>
-                    </div>
-                    <!-- Imagem -->
-                    <div class="right-image">
-                        <img src="img/Tenis 1.png" class="img-fluid" alt="Evento Classic">
+    <main class="flex-fill">
+        <header id="home" class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <!-- Título no canto esquerdo -->
+                <h1 class="display-5">
+                    COMPRE SEUS TENIS HOJE!!
+                    <p> a Classic Shoes e descubra o que significa andar com mais atitude!</p>
+                        <p> quem tem o novo modelo sabe a sensacao de estar um passo a frente. </p>
+                </h1>
+                <!-- Botão "Comprar Agora" no canto inferior esquerdo -->
+                <div class="d-flex justify-content-center">
+                    <a href="#contato">
+                        <button class="btn btn-primary buy-now-button" type="button">
+                            Fale conosco
+                        </button>
+                    </a>
+                </div>
+                <!-- Imagem -->
+                <div class="right-image">
+                    <img src="img/Tenis 1.png" class="img-fluid" alt="Evento Classic">
+                </div>
+            </div>
+        </header>
+    </main>
+
+    <section id="beneficios" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="titulo mb-4">PRODUTOS DE LANÇAMENTO</h2>
+                <p class="desconto"><strong>50% DE DESCONTO É SÓ AQUI!!</strong></p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-4 col-sm-6 my-3 d-flex justify-content-center">
+                    <div class="card shadow-lg border-0">
+                        <img src="img/Tenis de compra 1.png" alt="Tênis Premium LV" class="card-img-top">
+                        <div class="card-body">
+                            <h3 class="card-title">TÊNIS PREMIUM LV</h3>
+                            <p class="card-text">R$900,00</p>
+                            <button class="btn btn-primary w-100" onclick="msg_pagina()">Comprar</button>
+                        </div>
                     </div>
                 </div>
-            </header>
-        </main>
-
-<section id="beneficios" class="py-5 bg-light">
-    <div class="container text-center">
-        <h2 class="mb-4">PRODUTOS DE LANÇAMENTO</h2>
-        <p><strong>50% DE DESCONTO É SÓ AQUI!!</strong></p>
-        <div class="row justify-content-center">
-            <div class="col-md-4 col-sm-6 my-3 d-flex justify-content-center">
-                <div class="card shadow-lg border-0">
-                    <img src="img/Tenis de compra 1.png" alt="Tênis Premium LV" class="card-img-top">
-                    <div class="card-body">
-                        <h3 class="card-title">TÊNIS PREMIUM LV</h3>
-                        <p class="card-text">R$900,00</p>
-                        <button class="btn btn-primary w-100">COMPRAR</button>
+                <div class="col-md-4 col-sm-6 my-3 d-flex justify-content-center">
+                    <div class="card shadow-lg border-0">
+                        <img src="img/Tenis de compra 2.png" alt="Tênis WEEGO THE" class="img-fluid">
+                        <div class="card-body">
+                            <h3 class="card-title">TÊNIS WEEGO THE</h3>
+                            <p class="card-text">R$1200,00</p>
+                            <button class="btn btn-primary w-100" onclick="msg_pagina()">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 my-3 d-flex justify-content-center">
+                    <div class="card shadow-lg border-0">
+                        <img src="img/Tenis de compra 3.png" alt="Nike Air Max 90" class="card-img-top">
+                        <div class="card-body">
+                            <h3 class="card-title">NIKE AIR MAX 90</h3>
+                            <p class="card-text">R$1000,00</p>
+                            <button class="btn btn-primary w-100" onclick="msg_pagina()">Comprar</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6 my-3 d-flex justify-content-center">
-                <div class="card shadow-lg border-0">
-                    <img src="img/Tenis de compra 2.png" alt="Tênis WEEGO THE" class="img">
-                    <div class="card-body">
-                        <h3 class="card-title">TÊNIS WEEGO THE</h3>
-                        <p class="card-text">R$1200,00</p>
-                        <button class="btn btn-primary w-100">COMPRAR</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 my-3 d-flex justify-content-center">
-                <div class="card shadow-lg border-0">
-                    <img src="img/Tenis de compra 3.png" alt="Nike Air Max 90" class="card-img-top">
-                    <div class="card-body">
-                        <h3 class="card-title">NIKE AIR MAX 90</h3>
-                        <p class="card-text">R$1000,00</p>
-                        <button class="btn btn-primary w-100">COMPRAR</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="sobre" class="event-about container-fluid">
-    <div class="row mx-auto">
-        <div class="col-md-4 my-auto mx-auto">
-            <p class="paragrafo-sobre-2">
-                A Classic Shoes, fabrica e loja dos calçados mais tecnologicos do mercado,<span>é a anfitriã do evento</span>
-            </p>
-            <ul class="lista-atividades">
-                <li><span>&#10003;</span>Prepare-se para o modelo mais aguardado do ano!</li>
-                <li><span>&#10003;</span>O novo tênis da Classic Shoes une design arrojado, conforto e tecnologia de ponta.</li>
-                <li><span>&#10003;</span>Por que você vai amar?</li>
-                <li><span>&#10003;</span>Design Moderno: Estilo e conforto em um único modelo.</li>
-                <li><span>&#10003;</span>Tecnologia de Conforto: Materiais respirantes e solado de alta performance.</li>
-                <li><span>&#10003;</span>Versatilidade: Ideal para qualquer ocasião, do trabalho ao lazer.</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-    <section id="contato">
-        <div class="form-container">
-            <h2>Formulário</h2>
-                <form>
-                <div class="form-group">
-                    <input type="text" id="name" placeholder="Nome" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="email" placeholder="E-mail" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" id="telefone" placeholder="Telefone" required>
-                </div>
-                    <button class="btn" type="submit">Enviar</button>
-                </form>
         </div>
     </section>
 
-            <h4>DEPOIMENTOS</h4>
-            <br><br>
-            <H4>⭐️⭐️⭐️⭐️⭐️"O melhor tênis que já comprei! Super confortável e estiloso. Perfeito para o meu dia a dia, e o design é incrível!"
-                <br><br>— Lucas Oliveira, São Paulo, SP
-                <br><br>"Eu sou muito exigente com calçados, mas esse superou minhas expectativas. 
-                <br><br>Uso todos os dias e meu pé nunca se sentiu tão confortável. 
-                <br><br>O design também é ótimo, posso usá-lo tanto no trabalho quanto para um passeio com os amigos. Recomendo muito!"</H4>
+<section id="sobre" class="event-about container-fluid">
+    <div class="row mx-auto">
+        <div class="col-md-6 my-auto mx-auto">
+        
+        </div>
+    </div>
+</section>
 
-                <h4>⭐️⭐️⭐️⭐️⭐️"Adorei o conforto e a durabilidade. Já usei em várias ocasiões e o tênis não perdeu a forma! Super indico."
-                    <br><br>— Mariana Silva, Rio de Janeiro, RJ
-                    <br><br>"Além de ser confortável, esse tênis é muito versátil. Já usei em viagens, para treinos e no trabalho. 
-                    <br><br>A qualidade do material é excelente, e ainda por cima, ele não escorrega e tem um ótimo desempenho. Vale muito a pena!"</h4>
+<section id="contato">
+    <div id="forma">
+        <p class="paragrafo-sobre-2">
+            A Classic Shoes, fabrica e loja dos calçados mais tecnológicos do mercado, <span>é a anfitriã do evento</span>
+        </p>
+        <ul class="lista-atividades">
+            <li><span>&#10003;</span>Prepare-se para o modelo mais aguardado do ano!</li>
+            <li><span>&#10003;</span>O novo tênis da Classic Shoes une design arrojado, conforto e tecnologia de ponta.</li>
+            <li><span>&#10003;</span>Por que você vai amar?</li>
+            <li><span>&#10003;</span>Design Moderno: Estilo e conforto em um único modelo.</li>
+            <li><span>&#10003;</span>Tecnologia de Conforto: Materiais respirantes e solado de alta performance.</li>
+            <li><span>&#10003;</span>Versatilidade: Ideal para qualquer ocasião, do trabalho ao lazer.</li>
+        </ul>
+    </div>
+    <div class="form-container">
+        <form>
+        <div class="fundo">
+            <h2>Formulário</h2>
+            <div class="form-group">
+                <input type="text" id="name" placeholder="Nome" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" placeholder="E-mail" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" id="telefone" placeholder="Telefone" required>
+            </div>
+            <button class="btn" type="submit">Enviar</button>
+        </div>
+        </form>
+    </div>
+</section>
 
-                <h4>⭐️⭐️⭐️⭐️⭐️"Comprei para o meu namorado e ele adorou! Ele ama o conforto e a leveza do modelo. Com certeza vou comprar mais!"
-                    <br><br>— Fernanda Costa, Belo Horizonte, MG
-                    <br><br>"Fiquei surpresa com o conforto do tênis, é bem leve e não machuca o pé. 
-                    <br><br>Ele usa o dia todo, e não sente desconforto. Com certeza vou comprar outro para ele. Minha próxima compra será para mim!"</h4>
+    <h4>DEPOIMENTOS</h4>
+    <br><br>
+    <H4>⭐️⭐️⭐️⭐️⭐️"O melhor tênis que já comprei! Super confortável e estiloso. Perfeito para o meu dia a dia, e o design é incrível!"
+        <br><br>— Lucas Oliveira, São Paulo, SP
+        <br><br>"Eu sou muito exigente com calçados, mas esse superou minhas expectativas. 
+        <br><br>Uso todos os dias e meu pé nunca se sentiu tão confortável. 
+        <br><br>O design também é ótimo, posso usá-lo tanto no trabalho quanto para um passeio com os amigos. Recomendo muito!"</H4>
 
-                <h4>Classic Shoes📍 Endereço: Rua das Flores, 123, São Paulo, SP
-                    <br><br>📞 Telefone: (11) 1234-5678
-                    <br><br>📧 E-mail: contato@classicshoes.com.br</h4>
+        <h4>⭐️⭐️⭐️⭐️⭐️"Adorei o conforto e a durabilidade. Já usei em várias ocasiões e o tênis não perdeu a forma! Super indico."
+            <br><br>— Mariana Silva, Rio de Janeiro, RJ
+            <br><br>"Além de ser confortável, esse tênis é muito versátil. Já usei em viagens, para treinos e no trabalho. 
+            <br><br>A qualidade do material é excelente, e ainda por cima, ele não escorrega e tem um ótimo desempenho. Vale muito a pena!"</h4>
+
+        <h4>⭐️⭐️⭐️⭐️⭐️"Comprei para o meu namorado e ele adorou! Ele ama o conforto e a leveza do modelo. Com certeza vou comprar mais!"
+            <br><br>— Fernanda Costa, Belo Horizonte, MG
+            <br><br>"Fiquei surpresa com o conforto do tênis, é bem leve e não machuca o pé. 
+            <br><br>Ele usa o dia todo, e não sente desconforto. Com certeza vou comprar outro para ele. Minha próxima compra será para mim!"</h4>
+
+            <footer>
+                <div id="footer-content">
+                    <div id="social">
+                        <h4>Siga-nos nas redes sociais:<br><br>
+                            <li>Instagram: [@classixshoes]<a href="https://www.instagram.com/classixshoes">(https://www.instagram.com/classixshoes)</a></li><br><br>
+                            <li>Facebook[Classic Shoes]<a href="https://www.facebook.com/classixshoes">(https://www.facebook.com/classixshoes)</a></li><br><br>
+                            <li>Twitter[@classixshoes]<a href="https://www.twitter.com/classixshoes">(https://www.twitter.com/classixshoes)</a></li>
+                        </h4>
+                    </div>
+                </div>
+                <div id="cep">
+                    <h4>Classic Shoes📍 Endereço: Rua das Flores, 123, São Paulo, SP
+                        <br><br>📞 Telefone: (11) 1234-5678
+                        <br><br>📧 E-mail: contato@classicshoes.com.br</h4>
+                </div>
                 
-                    <h4>Siga-nos nas redes sociais:<br><br>
-                        <li>Instagram: [@classixshoes]<a href="Link">(https://www.instagram.com/classixshoes)</a></li><br><br>
-                        <li>Facebook[Classic Shoes]<a href="Link">(https://www.facebook.com/classixshoes)</a></li><br><br> 
-                        <li>Twitter[@classixshoes]<a href="Link">(https://www.twitter.com/classixshoes)</a></li>
-                    </h4>
+                <p>&copy; 2024 Página de Landing Page criada por Nicolas</p>
+            </footer>
+            
 
-
-
-
-
-
-        <footer>
-            <p>&copy; 2024 Página de Landing Page criada por Nicolas</p>
-        </footer>
+        <script src="js/script.js"></script>
     </body>
 </html>

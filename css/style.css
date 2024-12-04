@@ -8,38 +8,85 @@ body {
     padding: 0;
 }
 
+/* Barra de navegação */
 .barra-navegacao {
-    background-color: #ffffff;
-    position: fixed; /* Deixa a barra fixa no topo da página */
-    width: 100%; /* Garante que a barra ocupe toda a largura */
-    top: 0; /* Fixa no topo */
-    z-index: 1000; /* Garante que a barra fique por cima de outros elementos */
+    background-color: rgb(255, 255, 255); /* Cor de fundo da barra */
+    padding: 10px 0; /* Espaçamento em cima e embaixo */
 }
 
+/* Container da navegação */
+.container-nav {
+    display: flex; /* Usando Flexbox */
+    justify-content: space-between; /* Distribui os itens igualmente com espaços entre */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    width: 100%;
+}
+
+/* Estilo para os itens da navegação */
 .navbar-nav {
-    display: flex; /* Utiliza o flexbox */
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    width: 100%; /* Garante que o container ocupe toda a largura */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Exibe os itens na mesma linha */
 }
 
-.navbar-nav .nav-item {
-    padding-left: 20px; /* Espaçamento entre os itens */
-    padding-right: 20px; /* Espaçamento entre os itens */
+/* Links à esquerda */
+.navbar-nav.left {
+    margin-right: 30px; /* Espaçamento entre os links à esquerda */
 }
 
-.navbar-nav .nav-link {
-    color: #000; /* Define a cor do texto */
-    text-transform: uppercase; /* Deixa o texto em maiúsculas */
-    font-weight: bold; /* Torna o texto em negrito */
-    padding: 10px 15px; /* Ajuste de espaçamento dentro dos itens */
-    transition: background-color 0.3s; /* Transição suave */
+/* Links à direita */
+.navbar-nav.right {
+    margin-left: 30px; /* Espaçamento entre os links à direita */
 }
 
-.navbar-nav .nav-link:hover {
-    background-color: #007BFF; /* Altera a cor de fundo ao passar o mouse */
-    color: white; /* Altera a cor do texto */
+/* Logo (no meio) */
+.navbar-nav.logo {
+    display: flex;
+    justify-content: center; /* Centraliza a logo */
+    flex-grow: 1; /* Permite que a logo ocupe o espaço disponível e fique centralizada */
 }
 
+/* Estilo dos links */
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 0 15px; /* Adiciona espaçamento entre os links */
+}
+
+.nav-link:hover {
+    color: #ff9900; /* Altere a cor ao passar o mouse */
+}
+
+/* Estilo da logo */
+.logo img {
+    width: 150px; /* Tamanho da logo */
+}
+
+/* Media Query para telas de computador */
+@media (min-width: 1024px) {
+    .container-nav {
+        max-width: 1200px; /* Limita o tamanho do container a 1200px */
+        margin: 0 auto; /* Centraliza o container na tela */
+    }
+
+    /* Ajusta o tamanho da logo em telas grandes */
+    .logo img {
+        width: 200px; /* Aumenta o tamanho da logo para telas maiores */
+    }
+
+    /* Ajusta o tamanho da fonte para links maiores em telas grandes */
+    .nav-link {
+        font-size: 18px; /* Aumenta o tamanho da fonte dos links */
+    }
+
+    /* Adiciona mais espaçamento entre os links à esquerda e à direita */
+    .navbar-nav.left, .navbar-nav.right {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
 
 #home {
     background-image: url('../img/Fundo.png');
@@ -71,65 +118,111 @@ body {
     color: #0070a3;
 }
 
-footer {
-    background-color: #000;
-    height: 100px;
-}
-
-footer p {
-    color: #fff;
-    justify-items: center;
-    align-items: center;
-
-}
 
 
 .form-container {
-    background-color: #fff; /* Cor de Fundo */
     padding: 40px 60px; /* Espaçamento interno */
     border-radius: 8px; /* Borda arredondada nas pontas */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombreamento*/
-    width: 100%; /* Tamanho Largura */
-    max-width: 300px; /* Largura máxima */
+    width: 650px; /* Tamanho Largura */
+    max-width: 1500px; /* Largura máxima */
     height: 100%; /* Tamanho altura */
     max-height: 400px; /* Altura máxima */
-    margin: 20px; /* Margem todos os lados*/
+    margin: 20px; /* Margem todos os lados */
     margin-right: 100px; /* Margem a direita */
-    }
+}
 
+/* Estilo para o formulário */
 .form-container form {
     text-align: center; /* Centraliza o botão */
-    }
+}
 
+/* Estilo para o título */
 .form-container h2 {
     margin-bottom: 50px; /* Margem inferior */
-    }
+}
 
+/* Estilo para o botão */
 .form-container button {
-    justify-items: center; /* Orientando no centro o horizontalmente*/
+    justify-items: center; /* Orientando no centro o horizontalmente */
     align-items: center; /* Orientando no centro o verticalmente */
-    }
+}
 
+/* Estilo para os inputs */
+.form-container input {
+    width: 100%; /* Largura total disponível */
+    padding: 12px; /* Espaçamento interno */
+    font-size: 16px; /* Aumenta o tamanho da fonte */
+    border: 1px solid #ccc; /* Borda para os inputs */
+    border-radius: 4px; /* Bordas arredondadas */
+    box-sizing: border-box; /* Inclui o padding no cálculo da largura total */
+    margin-bottom: 20px; /* Espaço abaixo de cada input */
+}
+
+/* Estilo para o grupo de inputs */
 .form-group {
     margin-bottom: 20px; /* Margem inferior */
+}
+
+.fundo {
+    background-color: rgb(255, 0, 0);
+    padding: 50px;
+    padding: 40px 60px; /* Espaçamento interno */
+    border-radius: 8px; /* Borda arredondada nas pontas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombreamento*/
+    width: 650px; /* Tamanho Largura */
+    max-width: 1500px; /* Largura máxima */
+    height: 100%; /* Tamanho altura */
+    max-height: 400px; /* Altura máxima */
+    margin: 20px; /* Margem todos os lados */
+    margin-right: 100px; /* Margem a direita */
+}
+
+
+/* Estilo para o card */
+.card {
+    display: flex;
+    flex-direction: column; /* Garante que o conteúdo dentro do card seja empilhado na vertical */
+    justify-content: flex-start; /* Garante que o conteúdo fique alinhado ao topo */
+    height: 100%; /* Garantir que o cartão ocupe todo o espaço disponível dentro da coluna */
+}
+
+/* Garantir que a imagem dentro do card ocupe a largura do card sem deformar */
+.card-img-top {
+    width: 100%; /* Faz a imagem ocupar toda a largura do card */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Para o corpo do card, ajustando o espaçamento interno */
+.card-body {
+    padding: 1.25rem; /* Padding adequado */
+    flex-grow: 1; /* Garante que o card-body ocupe o restante do espaço disponível */
+}
+
+/* Ajuste para o botão */
+.btn-primary {
+    margin-top: 1rem; /* Espaçamento entre o texto e o botão */
+}
+
+/* Estilo para a seção de benefícios */
+#beneficios {
+    background-color: #f8f9fa; /* Cor de fundo clara */
+    padding-top: 3rem; /* Distância superior */
+    padding-bottom: 3rem; /* Distância inferior */
+}
+
+/* Alinhamento central do título */
+.text-center {
+    margin-bottom: 2rem; /* Espaçamento inferior */
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 1.5rem; /* Ajusta o espaçamento entre os cards em telas menores */
     }
-
-.form-group input, select {
-    box-sizing: border-box; /*Padding e border incluídos no cálculo da largura e altura */
-    width: 100%; /* Tamanho Largura */
-    padding: 10px; /* Espaçamento interno */
-    font-size: 16px; /* Tamanho fonte */
-    border: 1px solid #ccc; /* Bordas */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombreamento */
-    border-radius: 4px; /* Borda arredondada nas pontas */
-    outline: none; /* Remove o outline ao focar */
-    transition: border-color 0.3s; /* Adiciona uma transição suave */
 }
 
-    /* Estilo ao clicar em um capo (Focar em um campo) */
-.form-group input:focus, select:focus {
-    border-color: #2ECC71; /* Cor na borda */
-}
 
 button {
     color: #FFF; /* Define a cor do texto do botão (branco) */
@@ -150,13 +243,7 @@ button:hover {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Aumenta a sombra */
 }
 
-.card-container {
-display: grid; /* Define o layout como grid */
-grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas iguais */
-gap: 20px; /* Espaço entre os itens do grid */
-padding: 20px; /* Espaçamento interno no container */
-justify-items: center; /* Centraliza os cards horizontalmente nas colunas */
-}
+
 .card {
 background-color: white; /* Cor de fundo branca para o card */
 width: 250px; /* Largura do card */
@@ -169,50 +256,6 @@ text-align: center; /* Centraliza o conteúdo dentro do card */
 padding: 20px; /* Espaçamento interno do card */
 }
 
-.card:hover {
-transform: translateY(-10px); /* Move o card para cima */
-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra */
-}
-
-.card h3 {
-font-size: 14px; /* Tamanho da fonte do título */
-}
-
-.card p {
-font-size: 12px; /* Tamanho da fonte do parágrafo */
-color: #555; /* Cor do texto (cinza claro) */
-line-height: 1.6; /* Espaçamento entre linhas do texto */
-}
-
-.card img {
-width: 100px; /* Largura da imagem */
-height: 100px; /* Altura da imagem */
-border-radius: 50%; /* Faz a imagem ficar redonda */
-object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
-margin-bottom: 20px; /* Espaço abaixo da imagem */
-
-}
-
-.card-content {
-justify-items: center; /* Centraliza os itens horizontalmente dentro do grid */
-align-items: center; /* Centraliza os itens verticalmente dentro do grid */
-}
-
-.container {
-    display: flex;
-    justify-content: flex-end; /* Alinha a imagem à direita */
-    position: relative;
-}
-
-.logo {
-    /* Estilos para a logo */
-    margin-bottom: 20px; /* Espaço entre a logo e a imagem */
-}
-
-.right-image {
-    margin-top: -30px; /* Move a imagem para cima */
-    margin-right: -30px; /* Move a imagem ainda mais para a direita */
-}
 
 .jumbotron {
     display: flex; /* Utiliza o Flexbox */
@@ -239,16 +282,6 @@ align-items: center; /* Centraliza os itens verticalmente dentro do grid */
 }
 
 
-.right-image {
-    margin-left: 20px; /* Espaçamento entre a imagem e o conteúdo à esquerda */
-}
-
-.right-image img {
-    max-width: 100%; /* Garante que a imagem não ultrapasse os limites do container */
-    height: auto; /* Ajusta a altura da imagem automaticamente */
-    border-radius: 8px; /* Borda arredondada para a imagem */
-}
-
 .buy-now-button {
     margin-top: 20px; /* Espaçamento superior */
     border-radius: 50px; /* Borda arredondada do botão */
@@ -267,40 +300,6 @@ align-items: center; /* Centraliza os itens verticalmente dentro do grid */
     transition: all 0.3s ease; /* Adiciona transição suave para efeito hover */
 }
 
-.buy-now-button:hover {
-    background-color: #FF7043; /* Cor de fundo mais clara quando passar o mouse */
-    transform: scale(1.1); /* Aumenta o botão levemente ao passar o mouse */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
-}
-
-.buy-now-button:focus {
-    outline: none; /* Remove o contorno ao focar no botão */
-}
-
-.jumbotron div p {
-    color: #fff; /* Cor do título */
-}
-
-/* Container principal do banner */
-#home {
-    background-image: url('../img/Fundo.png'); /* Imagem de fundo */
-    background-size: cover; /* A imagem vai cobrir toda a área */
-    background-position: center; /* Centraliza a imagem de fundo */
-    display: flex; /* Usando Flexbox para alinhar os conteúdos */
-    justify-content: space-between; /* Espaça os itens com o texto à esquerda e a imagem à direita */
-    align-items: center; /* Alinha os itens verticalmente no centro */
-    height: 550px; /* Altura do banner */
-    color: #fff; /* Cor do texto do banner */
-    padding: 0 20px; /* Adiciona espaçamento dentro do banner */
-    position: relative; /* Para usar com o posicionamento do botão */
-}
-
-/* Container para o texto */
-#home .text-container {
-    max-width: 600px; /* Limita a largura do texto */
-    text-align: left; /* Alinha o texto à esquerda */
-}
-
 /* Título no banner */
 #home h1 {
     font-size: 28px; /* Tamanho reduzido do título */
@@ -308,35 +307,6 @@ align-items: center; /* Centraliza os itens verticalmente dentro do grid */
     line-height: 1.4; /* Espaçamento entre as linhas */
     margin-bottom: 15px; /* Espaçamento abaixo do título */
     text-transform: uppercase; /* Transforma as letras para maiúsculas */
-}
-
-/* Botão "Comprar Agora" */
-.buy-now-button {
-    padding: 15px 40px; /* Tamanho do botão */
-    font-size: 18px; /* Tamanho menor da fonte */
-    font-weight: bold; /* Deixa a fonte do botão em negrito */
-    background-color: #FF5722; /* Cor laranja vibrante */
-    color: #fff; /* Cor do texto no botão */
-    border: none; /* Remove borda */
-    border-radius: 50px; /* Bordas arredondadas */
-    cursor: pointer; /* Muda o cursor para mãozinha */
-    margin-top: 20px; /* Margem superior para dar um espaçamento entre o texto e o botão */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    transition: all 0.3s ease; /* Transição suave */
-}
-
-/* Efeito quando o mouse passa sobre o botão */
-.buy-now-button:hover {
-    background-color: #FF7043; /* Cor do botão quando o mouse passa */
-    transform: scale(1.1); /* Aumenta o tamanho do botão */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta a sombra */
-}
-
-/* Estilo para a imagem */
-.right-image {
-    position: relative; /* Posiciona a imagem dentro da flexbox */
-    max-width: 400px; /* Tamanho máximo da imagem */
-    height: auto; /* Mantém a proporção da imagem */
 }
 
 /* Tornando o banner responsivo */
@@ -347,24 +317,65 @@ align-items: center; /* Centraliza os itens verticalmente dentro do grid */
         height: auto; /* Altura automática para telas pequenas */
         padding: 20px; /* Adiciona padding */
     }
-
-    /* Ajustando o título em telas pequenas */
-    #home h1 {
-        font-size: 20px; /* Menor tamanho de fonte */
-        margin-bottom: 10px; /* Menor margem inferior */
-    }
-
-    /* Ajustando o botão em telas pequenas */
-    .buy-now-button {
-        font-size: 16px; /* Menor tamanho de fonte */
-        padding: 15px 40px; /* Menor tamanho do botão */
-    }
-
-    /* Ajustando a imagem em telas pequenas */
-    .right-image {
-        max-width: 300px; /* Imagem menor em telas pequenas */
-    }
 }
 
+/* Estilo do Footer */
+footer {
+    background-color: #000; /* Cor de fundo do footer */
+    color: #fff; /* Cor do texto */
+    padding: 40px 20px; /* Padding para dar espaçamento */
+    text-align: center; /* Alinha o texto centralizado por padrão */
+}
 
+/* Container do conteúdo do footer */
+#footer-content {
+    display: flex; /* Usando Flexbox */
+    justify-content: space-between; /* Coloca as divs nas extremidades */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    margin-bottom: 20px; /* Espaço abaixo do conteúdo */
+}
 
+/* Estilo para a seção social */
+.social {
+    display: flex;
+    flex-direction: column; /* Organiza os itens da social verticalmente */
+    text-align: right; /* Alinha o texto à direita */
+    width: 100%; /* Limita a largura da seção */
+    padding-right: 10px; /* Um pouco de espaçamento à direita */
+}
+
+/* Estilo para a seção CEP */
+.cep {
+    display: flex;
+    flex-direction: column; /* Organiza o endereço e telefone verticalmente */
+    text-align: left; /* Alinha o texto à esquerda */
+    width: 100%; /* Limita a largura da seção */
+    padding-left: 10px; /* Um pouco de espaçamento à esquerda */
+}
+
+/* Estilo do texto no footer */
+footer h4 {
+    font-size: 14px; /* Reduz o tamanho da fonte */
+    line-height: 1.8; /* Ajusta o espaçamento entre as linhas */
+}
+
+/* Alinha o copyright no rodapé */
+footer p {
+    margin-top: 20px;
+    font-size: 12px;
+    text-align: center; /* Centraliza o texto */
+    color: #fff;
+}
+
+/* Responsividade - Para telas pequenas */
+@media (max-width: 768px) {
+    #footer-content {
+        flex-direction: column; /* Empilha os itens em telas menores */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .social, .cep {
+        width: 100%; /* As divs ocupam a largura completa */
+        text-align: center; /* Centraliza o texto em telas menores */
+    }
+}
