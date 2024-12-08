@@ -20,13 +20,9 @@
                 </ul>
         
                 <!-- Logo Centralizada -->
-                <ul class="navbar-nav logo">
-                    <li class="nav-item">
-                        <a href="#">
-                            <img src="img/CLASSIC SHOES.png" width="150" alt="Logo Classic">
-                        </a>
-                    </li>
-                </ul>
+                <a href="#" class="logo">
+                    <img src="img/CLASSIC SHOES.png" width="150" alt="Logo Classic">
+                </a>
         
                 <!-- Links à direita -->
                 <ul class="navbar-nav right">
@@ -35,6 +31,9 @@
                 </ul>
             </div>
         </nav>
+        
+        
+        
     <main class="flex-fill">
         <header id="home" class="jumbotron jumbotron-fluid">
             <div class="container">
@@ -125,19 +124,19 @@
     </div>
     <div class="form-container">
         <form>
-        <div class="fundo">
-            <h2>Formulário</h2>
-            <div class="form-group">
-                <input type="text" id="name" placeholder="Nome" required>
+            <div class="fundo">
+                <h2>Formulário</h2>
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Nome" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="E-mail" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="telefone" placeholder="Telefone" required>
+                </div>
+                <button class="btn" type="submit">Enviar</button>
             </div>
-            <div class="form-group">
-                <input type="email" id="email" placeholder="E-mail" required>
-            </div>
-            <div class="form-group">
-                <input type="tel" id="telefone" placeholder="Telefone" required>
-            </div>
-            <button class="btn" type="submit">Enviar</button>
-        </div>
         </form>
     </div>
 </section>
@@ -163,21 +162,25 @@
             <footer>
                 <div id="footer-content">
                     <div id="social">
-                        <h4>Siga-nos nas redes sociais:<br><br>
-                            <li>Instagram: [@classixshoes]<a href="https://www.instagram.com/classixshoes">(https://www.instagram.com/classixshoes)</a></li><br><br>
-                            <li>Facebook[Classic Shoes]<a href="https://www.facebook.com/classixshoes">(https://www.facebook.com/classixshoes)</a></li><br><br>
-                            <li>Twitter[@classixshoes]<a href="https://www.twitter.com/classixshoes">(https://www.twitter.com/classixshoes)</a></li>
+                        <h4>Siga-nos nas redes sociais:
+                            <br><br>Instagram: [@classixshoes]<a href=".instagram.com/classixshoes">(.instagram.com/classixshoes)</a>
+                            <br><br>Facebook[Classic Shoes]<a href=".facebook.com/classixshoes">(.facebook.com/classixshoes)</a>
+                            <br><br>Twitter[@classixshoes]<a href=".twitter.com/classixshoes">(.twitter.com/classixshoes)</a>
+                        </h4>
+                    </div>
+                    <div id="cep">
+                        <h4>Classic Shoes📍 Endereço:</h4>
+                        <h4>
+                             Rua das Flores, 123, São Paulo, SP
+                            <br><br>📞 Telefone: (11) 1234-5678
+                            <br><br>📧 E-mail: contato@classicshoes.com.br
                         </h4>
                     </div>
                 </div>
-                <div id="cep">
-                    <h4>Classic Shoes📍 Endereço: Rua das Flores, 123, São Paulo, SP
-                        <br><br>📞 Telefone: (11) 1234-5678
-                        <br><br>📧 E-mail: contato@classicshoes.com.br</h4>
-                </div>
-                
                 <p>&copy; 2024 Página de Landing Page criada por Nicolas</p>
             </footer>
+            
+            
             
 
         <script src="js/script.js"></script>
