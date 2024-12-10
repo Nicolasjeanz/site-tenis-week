@@ -23,16 +23,22 @@ body {
     width: 100%;
 }
 
-/* Links à esquerda */
-.navbar-nav.left {
+.links {
     display: flex;
-    gap: 20px; /* Espaço entre os links */
+    gap: 80px; /* Espaço entre os links */
 }
 
-/* Links à direita */
-.navbar-nav.right {
-    display: flex;
-    gap: 20px; /* Espaço entre os links */
+.links li {
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding-left: 0; /* Remove o recuo da esquerda (opcional, se necessário) */
+    transform: all 0.5s;
+}
+
+.links li:hover {
+    color: #007bff;
 }
 
 /* Logo */
@@ -74,17 +80,11 @@ body {
         width: 200px; /* Aumenta o tamanho da logo em telas maiores */
     }
 
-    /* Links à esquerda e direita */
-    .navbar-nav.left, .navbar-nav.right {
-        gap: 30px; /* Maior espaçamento entre os links */
-    }
-
     /* Ajusta o tamanho da fonte para links maiores em telas grandes */
     .nav-link {
         font-size: 18px; /* Aumenta o tamanho da fonte dos links */
     }
 }
-
 
 #home {
     background-image: url('../img/Fundo.png');
@@ -93,6 +93,88 @@ body {
     background-position: center;
     margin-bottom: 0;
 }
+
+.jumbotron {
+    display: flex; /* Flexbox para alinhar os itens lado a lado */
+    justify-content: space-between; /* Espaça o conteúdo entre o texto e a imagem */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    padding: 50px 20px; /* Ajusta o preenchimento */
+    background-image: url('img/Fundo.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    position: relative;
+}
+
+.container {
+    height: 70vh;
+}
+
+.jumbotron .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinha no topo */
+    width: 100%;
+}
+
+/* Bloco de texto com flexbox para empilhar os itens */
+.text-container {
+    display: flex;
+    flex-direction: column; /* Empilha os textos verticalmente */
+    justify-content: flex-start; /* Alinha os itens no topo */
+    color: #fff; /* Cor do texto */
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-right: 20px; /* Espaçamento entre o texto e a imagem */
+    margin-top: 200px; /* Espaçamento superior para mover o texto para baixo */
+}
+
+.text-container h1 {
+    font-size: 2.5rem;
+    font-weight: bold; /* Negrito no título */
+    line-height: 1.4; /* Espaçamento entre as linhas */
+    margin-bottom: 15px;
+}
+
+.text-container p {
+    font-size: 1.25rem; /* Tamanho da fonte para os parágrafos */
+    margin-bottom: 10px; /* Espaçamento entre os parágrafos */
+}
+
+/* Estilo do botão */
+.buy-now-button {
+    margin-top: 20px; /* Espaçamento superior para o botão */
+    border-radius: 50px;
+    padding: 20px 50px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #FF5722;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center; /* Garante que o texto do botão esteja centralizado */
+}
+
+/* Tornando o banner responsivo */
+@media (max-width: 768px) {
+    #home {
+        flex-direction: column; /* Empilha os elementos em coluna em telas menores */
+        text-align: center; /* Centraliza o texto */
+        height: auto;
+        padding: 20px;
+    }
+
+    .jumbotron .container {
+        flex-direction: column; /* Empilha o conteúdo em coluna */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .text-container {
+        text-align: center; /* Centraliza o texto em telas pequenas */
+        margin-top: 80px; /* Menos espaçamento superior em telas menores */
+    }
+}
+
 
 .lista-atividades {
     list-style-type: none;
@@ -108,10 +190,6 @@ body {
 }
 
 .lista-atividades  li span {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
     font-size: 20px;
     color: #0070a3;
 }
@@ -119,78 +197,110 @@ body {
 
 
 /* Estilo para o contêiner principal */
-#contato {
-    display: flex; /* Para alinhar os elementos lado a lado */
-    justify-content: space-between; /* Garante que os elementos fiquem com espaçamento entre eles */
-    align-items: flex-start; /* Alinha os itens no topo */
-    flex-wrap: wrap; /* Permite quebra de linha caso o espaço não seja suficiente */
+#sobre {
+    display: flex; /* Alinha os itens lado a lado */
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    height: 65vh; /* Faz com que a seção ocupe toda a altura da tela */
 }
 
-/* Estilo para o forma */
+/* Estilo para o contêiner da imagem */
+#imagem img {
+    width: 500px; /* Define um tamanho fixo para a imagem (ajuste conforme necessário) */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-right: 200px; /* Espaço entre a imagem e o conteúdo */
+}
+
+/* Estilo para o contêiner do conteúdo */
 #forma {
-    flex: 1; /* Ocupa o máximo de espaço disponível */
-    padding: 20px;
-    margin-right: 30px; /* Espaço entre os dois elementos */
+    flex: 1; /* Faz com que o conteúdo ocupe o restante do espaço disponível */
+    max-width: 600px; /* Limita a largura do conteúdo */
+    text-align: left; /* Alinha o texto à esquerda */
 }
 
-/* Estilo para o form-container */
+/* Contêiner principal com formulário e imagens ao lado */
+.form-container-wrapper {
+    display: flex; /* Usando flexbox para colocar o formulário e as imagens lado a lado */
+    justify-content: center; /* Centraliza os itens na linha */
+    align-items: flex-start; /* Alinha no topo */
+    width: 100%;
+    max-width: 1200px; /* Largura máxima */
+    margin: 20px auto; /* Centraliza o contêiner */
+}
+
+/* Formulário */
 .form-container {
-    padding: 30px 40px; /* Espaçamento interno */
-    border-radius: 8px; /* Borda arredondada nas pontas */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombreamento */
-    width: 650px; /* Tamanho largura */
-    max-width: 100%; /* Largura máxima como 100% do contêiner pai */
-    height: auto; /* Altura automática para ajustar conforme o conteúdo */
-    max-height: 400px; /* Altura máxima */
-    margin: 20px auto; /* Centraliza e aplica margens */
-    display: flex; /* Usado para centralizar o conteúdo */
-    flex-direction: column; /* Alinha os itens na coluna */
-    justify-content: flex-start; /* Alinha os itens no topo */
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 650px; /* Largura do formulário */
+    max-width: 100%; /* Responsivo */
+    height: 400px; /* Altura do formulário */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-right: 50px; /* Espaçamento entre o formulário e as imagens */
 }
 
 /* Estilo para o formulário */
 .form-container form {
-    width: 100%; /* Largura total disponível */
-    display: flex; /* Usado para alinhar os itens */
-    flex-direction: column; /* Alinha os inputs e botões na coluna */
-    gap: 20px; /* Espaçamento entre os itens */
-    align-items: stretch; /* Faz os inputs e o botão tomarem toda a largura */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch;
+}
+
+/* Estilo para o contêiner das imagens ao lado */
+.image-container {
+    display: grid; /* Usando grid para as imagens formarem um quadrado */
+    grid-template-columns: 1fr 1fr; /* Duas colunas */
+    grid-template-rows: 1fr 1fr; /* Duas linhas */
+    gap: 0; /* Remove qualquer espaçamento entre as imagens */
+    width: 410px; /* Largura igual ao do formulário */
+    height: 210px; /* Altura igual ao do formulário */
+    margin-top: -40px; /* Move as imagens um pouco para cima */
+}
+
+/* Estilo para as imagens */
+.corner-img {
+    width: 100%; /* Faz as imagens preencherem todo o espaço de cada célula do grid */
+    height: 100%; /* Faz as imagens preencherem todo o espaço de cada célula do grid */
+    object-fit: cover; /* Faz a imagem preencher o espaço sem distorção */
 }
 
 /* Estilo para o título */
 .form-container h2 {
-    margin-bottom: 30px; /* Margem inferior */
-    text-align: center; /* Centraliza o título */
-    font-size: 24px; /* Tamanho do título */
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 24px;
 }
 
 /* Estilo para os inputs */
 .form-container input {
-    width: 100%; /* Largura total disponível */
-    padding: 12px; /* Espaçamento interno */
-    font-size: 16px; /* Aumenta o tamanho da fonte */
-    border: 1px solid #ccc; /* Borda para os inputs */
-    border-radius: 4px; /* Bordas arredondadas */
-    box-sizing: border-box; /* Inclui o padding no cálculo da largura total */
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 /* Estilo para o grupo de inputs */
 .form-group {
-    margin-bottom: 20px; /* Espaço abaixo de cada input */
+    margin-bottom: 20px;
 }
 
 /* Estilo para o botão */
 .form-container .btn {
-    padding: 12px 20px; /* Espaçamento interno do botão */
-    background-color: #008cff; /* Cor de fundo do botão */
-    color: white; /* Cor do texto do botão */
-    font-size: 16px; /* Tamanho do texto */
-    border: none; /* Remove a borda padrão */
-    border-radius: 4px; /* Bordas arredondadas no botão */
-    cursor: pointer; /* Cursor de pointer ao passar o mouse */
+    padding: 12px 20px;
+    background-color: #008cff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
-
-
 
 /* Estilo para o card */
 .card {
@@ -270,72 +380,10 @@ padding: 20px; /* Espaçamento interno do card */
 }
 
 
-.jumbotron {
-    display: flex; /* Utiliza o Flexbox */
-    justify-content: space-between; /* Espaça o conteúdo entre o título, botão e imagem */
-    align-items: center; /* Alinha os itens verticalmente no centro */
-    padding: 50px 20px; /* Ajusta o preenchimento */
-    background-image: url('img/Fundo.png'); /* Exemplo de imagem de fundo */
-    background-size: cover;
-    background-position: center;
-    min-height: 400px; /* Altura mínima */
-    position: relative; /* Permite posicionar elementos dentro do jumbotron */
-}
-
-.jumbotron .container {
-    display: flex;
-    justify-content: space-between; /* Espaça os itens dentro do container */
-    align-items: center; /* Alinha verticalmente no centro */
-    width: 100%;
-}
-
-.jumbotron h1 {
-    font-size: 2.5rem; /* Ajuste do tamanho do título */
-    color: #fff; /* Cor do título */
-}
-
-
-.buy-now-button {
-    margin-top: 20px; /* Espaçamento superior */
-    border-radius: 50px; /* Borda arredondada do botão */
-    padding: 20px 50px; /* Aumenta o tamanho do botão */
-    font-size: 18px; /* Aumenta o tamanho da fonte */
-    font-weight: bold; /* Deixa a fonte mais ousada */
-    color: #fff; /* Cor do texto (branco) */
-    background-color: #FF5722; /* Cor de fundo vibrante (laranja) */
-    border: none; /* Remove a borda padrão */
-    position: absolute; /* Posiciona o botão de forma absoluta */
-    left: 20px; /* Alinha o botão ao canto esquerdo */
-    bottom: 20px; /* Alinha o botão ao canto inferior */
-    z-index: 10; /* Garante que o botão fique acima de outros elementos */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra suave para profundidade */
-    cursor: pointer; /* Muda o cursor para uma mãozinha quando passar o mouse */
-    transition: all 0.3s ease; /* Adiciona transição suave para efeito hover */
-}
-
-/* Título no banner */
-#home h1 {
-    font-size: 28px; /* Tamanho reduzido do título */
-    font-weight: bold; /* Deixa o título em negrito */
-    line-height: 1.4; /* Espaçamento entre as linhas */
-    margin-bottom: 15px; /* Espaçamento abaixo do título */
-    text-transform: uppercase; /* Transforma as letras para maiúsculas */
-}
-
-/* Tornando o banner responsivo */
-@media (max-width: 768px) {
-    #home {
-        flex-direction: column; /* Empilha os elementos em coluna em telas menores */
-        text-align: center; /* Centraliza o texto */
-        height: auto; /* Altura automática para telas pequenas */
-        padding: 20px; /* Adiciona padding */
-    }
-}
-
 /* Estilo do Footer */
 footer {
     background-color: #000; /* Cor de fundo do footer */
-    color: #fff; /* Cor do texto */
+    color: #FFF;
     padding: 40px 20px; /* Padding para dar espaçamento */
     text-align: center; /* Alinha o texto centralizado por padrão */
 }
@@ -343,11 +391,17 @@ footer {
 /* Container do conteúdo do footer */
 #footer-content {
     display: flex; /* Usando Flexbox */
-    justify-content: center; /* Centraliza as colunas (Social e CEP) */
+    justify-content: space-between; /* Centraliza as colunas (Social e CEP) */
     align-items: flex-start; /* Alinha os itens no topo */
     margin-bottom: 20px; /* Espaço abaixo do conteúdo */
     gap: 40px; /* Espaço entre as seções Social e CEP */
     width: 100%; /* Garante que ocupe a largura completa */
+}
+
+#scopy {
+    text-align: center;
+    color: #007BFF;
+
 }
 
 /* Estilo para a seção social */
@@ -358,12 +412,22 @@ footer {
     width: 50%; /* Limita a largura da seção */
 }
 
+#midia a img {
+    width: 50px;
+    height: auto; /* Mantém a proporção das imagens */
+    margin-bottom: 10px; /* Espaçamento entre as imagens */
+}
+
+/* Outros estilos mantidos... */
+
+
 /* Estilo para a seção CEP */
 #cep {
     display: flex;
     flex-direction: column; /* Organiza o endereço e telefone verticalmente */
-    text-align: left; /* Alinha o texto à esquerda */
+    text-align: right; /* Alinha o texto à direito */
     width: 50%; /* Limita a largura da seção */
+    color: #FFF;
 }
 
 /* Ajustando o alinhamento do título e conteúdo */
